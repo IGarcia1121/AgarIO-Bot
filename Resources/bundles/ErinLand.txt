@@ -1,0 +1,2 @@
+// 32x32 images for files and folders
+BITMAP,ErinLand,ErinLand.png
