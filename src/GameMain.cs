@@ -97,10 +97,17 @@ namespace Petri
                 }
                 else
                 {
-                    if (SwinGame.MouseDown(MouseButton.LeftButton))
+                    if (SwinGame.KeyTyped(KeyCode.vk_SPACE))
+                    {
+                        PushMessage(17);
+                    }
+                    else if (SwinGame.KeyTyped(KeyCode.vk_w))
+                    {
+                        PushMessage(21);
+                    }
+                    else
                     {
                         Movement();
-                        //PushMessage(17);
                     }
                 }
 

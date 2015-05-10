@@ -99,6 +99,7 @@ namespace Petri
                             Circle virus = new Circle(Color.Black, (int)(b.x - _cameraX), (int)(b.y - _cameraY), (int)b.Size + 3, false);
                             virus.Draw();
                         }
+
                         Circle circ = new Circle(SwinGame.RGBColor(b.r, b.g, b.b), (int)(b.x - _cameraX), (int)(b.y - _cameraY), (int)b.Size, false);
                         circ.Draw();
 
@@ -106,7 +107,7 @@ namespace Petri
                         {
                             SwinGame.DrawTextOnScreen(_nameCache[b.Id], Color.Black, (int)(b.x - _cameraX), (int)(b.y - _cameraY));
                         }
-                        if (b.Size > 11)
+                        if (b.Size > 20 && !b.IsVirus)
                         {
                             SwinGame.DrawTextOnScreen(Math.Round(b.Size).ToString(), Color.Black, (int)(b.x - _cameraX), (int)(b.y - _cameraY + 10));
                         }
